@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saad Al Ahsan — Web3 Entrepreneur & Co-Founder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1,2,3,4,5,7,8,9&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="mobile-advise">
+        <h3 style="font-family: var(--fd); font-size: 32px; color: var(--accent); margin-bottom: 16px;">Hello!</h3>
+        <p style="font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 280px; margin: 0 auto;">
+            Your mobile can’t handle my love ! so please use a <b>Desktop</b> device 🙂</p>
+    </div>
+    <div id="cd"></div>
+    <div id="cr"></div>
+    <canvas id="bgc"></canvas>
+    <div id="scroll-prog"></div>
+
+    <!-- Orbs -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <!-- ═══ NAV ═══ -->
+    <nav id="nav">
+        <div class="nav-left">
+            <a href="#" class="nav-logo">
+                <span class="logo-dot"></span>
+                SAAD
+            </a>
+        </div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li class="nav-sep"></li>
+                <li><a href="#stack">Stack</a></li>
+                <li class="nav-sep"></li>
+                <li><a href="#roadmap">Experience</a></li>
+                <li class="nav-sep"></li>
+                <li><a href="#contact-footer">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="mailto:saadahsanmain@gmail.com" class="nav-cta">
+                <span class="cta-pulse"></span>
+                Available for Work
+            </a>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="top" style="background: transparent;">
+        <!-- Cinematic Video Background -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.6); pointer-events: none;">
+            <source src="https://res.cloudinary.com/dfonotyfb/video/upload/v1775585556/dds3_1_rqhg7x.mp4" type="video/mp4" />
+        </video>
+        
+        <!-- Dark overlay for better text readability -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(10,9,15,0.3) 0%, rgba(10,9,15,0.7) 100%); z-index: 1;"></div>
+
+        <div class="hero-content" style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%; text-align: center; padding-top: 8vh;">
+            
+            <div class="hero-eyebrow" style="position: relative; z-index: 2; margin-bottom: 24px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); color: #fff;">
+                <div class="eyebrow-dot" style="background: var(--lime); box-shadow: 0 0 10px var(--lime);"></div>Saad Al Ahsan · Web3 Entrepreneur · Co-Founder
+            </div>
+            
+            <h1 class="hero-title" style="position: relative; z-index: 2; color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,0.5); margin-bottom: 24px;">
+                <div class="line"><span>WEB3</span></div>
+                <div class="line"><span style="color: var(--lime);">ENTREPRENEUR</span></div>
+                <div class="line"><span>& FOUNDER.</span></div>
+            </h1>
+            
+            <div class="hero-bottom" style="position: relative; z-index: 2; display: flex; justify-content: center; width: 100%;">
+                <p class="hero-sub" style="max-width: 540px; color: rgba(255,255,255,0.8); text-shadow: 0 2px 8px rgba(0,0,0,0.8); font-size: 18px; line-height: 1.6;">
+                    An active and multidimensional Web3 Entrepreneur and CSE student with 4+ years of experience in blockchain, cryptocurrency, and trading. Evolved from managing large-scale online communities to co-founding PRUF Protocol and Tradespy.
+                </p>
+            </div>
+
+            <div class="hero-scroll" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <span style="font-family: var(--fm); font-size: 9px; letter-spacing: 4px; color: rgba(255,255,255,0.5); text-transform: uppercase;">Scroll</span>
+                <div class="scroll-mouse" style="border-color: rgba(255,255,255,0.3);">
+                    <div class="scroll-mouse-dot" style="background: var(--lime); box-shadow: 0 0 8px var(--lime);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ═══ HORIZONTAL STICKY ABOUT ═══ -->
+    <div class="about-sticky-wrap" id="about">
+        <div class="about-sticky" id="about-sticky">
+
+            <!-- LEFT: scrolling text panels -->
+
+            <div class="about-left">
+
+                <!-- Glowing scroll progress line -->
+
+                <div class="about-scroll-line">
+                    <div class="about-scroll-fill" id="about-scroll-fill"></div>
+                </div>
+
+                <!-- Particle burst canvas -->
+
+                <canvas id="about-burst-canvas"></canvas>
+
+
+
+                <div class="about-panels-track" id="about-track">
+
+
+
+                    <!-- Panel 1 -->
+
+                    <div class="about-panel panel-active" id="apanel-0">
+
+                        <div class="about-panel-num">01</div>
+
+                        <div class="about-panel-inner">
+
+                            <div class="tag-label">001 — Professional Summary</div>
+
+                            <h2 class="about-h"><em>Multidimensional</em><br>Web3 Entrepreneur<br>& Co-Founder.</h2>
+
+                            <div class="about-p">
+
+                                <p>Over 4 years of experience in blockchain, cryptocurrency, and trading industries.</p>
+                                <p>Skilled in connecting strategic exchange partnerships, technical development, and project marketing.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Panel 2 -->
+
+                    <div class="about-panel" id="apanel-1">
+
+                        <div class="about-panel-num">02</div>
+
+                        <div class="about-panel-inner">
+
+                            <div class="tag-label">002 — Experience</div>
+
+                            <h2 class="about-h">Co-Founder &<br><em>Project Lead</em><br>for Web3 Projects.</h2>
+
+                            <div class="about-p">
+
+                                <p>Co-founded and successfully launched multiple innovative Web3 projects including PRUF Protocol, Tradespy, Trollix, and Solana Animal.</p>
+
+                                <p>Led strategic development, tokenomics, and multi-channel marketing campaigns.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Panel 3 -->
+
+                    <div class="about-panel" id="apanel-2">
+
+                        <div class="about-panel-num">03</div>
+
+                        <div class="about-panel-inner">
+
+                            <div class="tag-label">003 — Trading & Listings</div>
+
+                            <h2 class="about-h">Exchange Listing<br><em>Manager</em> &<br>Crypto Trader.</h2>
+
+                            <div class="about-p">
+
+                                <p>Facilitated end-to-end token listing on major Centralized Exchanges (CEX) like MEXC, LBank, and Coinstore.</p>
+
+                                <p>Actively managing a trading portfolio across Forex and cryptocurrency markets since 2021.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- Progress pills -->
+
+                <div class="about-progress" id="about-progress">
+
+                    <div class="ap-dot active"></div>
+
+                    <div class="ap-dot"></div>
+
+                    <div class="ap-dot"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: glass cards -->
+            <!-- RIGHT: 3D tilt glass cards -->
+
+            <div class="about-right" id="about-right">
+
+                <div class="about-right-label" id="about-right-label">01 / 03</div>
+
+                <!-- Card 1 -->
+                <div class="about-card-slot">
+                    <div class="glass-card panel-0-card active" id="ac0">
+                        <div class="gc-inner">
+                            <div class="gc-badge"><span></span>Years Active</div>
+                            <div class="gc-num c-accent">4+</div>
+                            <div class="gc-sub">Years in Web3 & Trading</div>
+                            <div class="gc-body">Active since 2021 across blockchain, cryptocurrency, and trading. Managing large-scale communities and co-founding successful Web3 projects.</div>
+                        </div>
+                        <div class="gc-ring"></div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="about-card-slot">
+                    <div class="glass-card panel-1-card" id="ac1">
+                        <div class="gc-inner">
+                            <div class="gc-badge"
+                                style="background:rgba(201,112,32,.07);border-color:rgba(201,112,32,.14);color:var(--amber)">
+                                <span style="background:var(--amber)"></span>Community
+                            </div>
+                            <div class="gc-num c-amber">1K+</div>
+                            <div class="gc-sub">Massive User Communities</div>
+                            <div class="gc-body">Managed and scaled massive user communities like Nayeem Rezvan Community (NRC) and Airdrop Accelerator (AA) from 2020 to 2023.</div>
+                        </div>
+                        <div class="gc-ring"></div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="about-card-slot">
+                    <div class="glass-card panel-2-card" id="ac2">
+                        <div class="gc-inner">
+                            <div class="gc-badge"
+                                style="background:rgba(0,232,122,.06);border-color:rgba(0,232,122,.15);color:var(--green)">
+                                <span style="background:var(--green)"></span>On-Chain
+                            </div>
+                            <div class="gc-num c-green">CEX</div>
+                            <div class="gc-sub">Exchange Listings</div>
+                            <div class="gc-body">Facilitated end-to-end token listings on major CEXs including MEXC, LBank, and Coinstore, acting as a key listing partner.</div>
+                        </div>
+                        <div class="gc-ring"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ SPLIT-FLAP ═══ -->
+    <div class="flap-section" id="flap-section">
+        <div class="flap-label"> </div>
+        <div class="flap-board">
+            <div class="flap-row-wrap">
+                <div class="flap-row-label">ROLE</div>
+                <div class="flap-row" id="flap0"></div>
+                <div class="flap-status on-chain">ACTIVE</div>
+            </div>
+            <div class="flap-row-wrap">
+                <div class="flap-row-label">STACK</div>
+                <div class="flap-row" id="flap1"></div>
+                <div class="flap-status live">LIVE</div>
+            </div>
+            <div class="flap-row-wrap">
+                <div class="flap-row-label">STATUS</div>
+                <div class="flap-row" id="flap2"></div>
+                <div class="flap-status building">BUILDING</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ MACBOOK ═══ -->
+    <section class="mb-section" id="stack">
+        <div class="mb-bg-g"></div>
+        <div class="mb-sticky">
+            <div class="mb-top-label">
+                <div class="tag-label">004 — Tech Stack</div>
+                <h2>My Arsenal - Scroll To Explore</h2>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="mb-scroll" id="mb-scroll">
+                <span>SCROLL TO EXPLORE</span>
+                <div class="scroll-mouse">
+                    <div class="scroll-mouse-dot"></div>
+                </div>
+            </div>
+
+            <div class="mb-outer">
+                <div class="mb-wrap" id="mb-wrap">
+                    <div class="macbook" id="macbook">
+                        <div class="mb-lid" id="mb-lid">
+                            <div class="mb-bezel">
+                                <div class="mac-bar">
+                                    <div class="mac-dots">
+                                        <div class="mac-dot"></div>
+                                        <div class="mac-dot"></div>
+                                        <div class="mac-dot"></div>
+                                    </div>
+                                    <div class="mac-title-bar" id="mac-title">zax.dev — skill_viewer.sh</div>
+                                    <div class="mac-time" id="mac-time">00:00</div>
+                                </div>
+                                <div class="mb-screen" id="mb-screen"></div>
+                                <div class="screen-glow" id="scr-glow"></div>
+                                <div class="scanlines"></div>
+                                <div class="scr-cover" id="scr-cover"></div>
+                            </div>
+                        </div>
+                        <div class="mb-hinge"></div>
+                        <div class="mb-base"></div>
+                        <div class="mb-keyboard"></div>
+                        <div class="mb-side" id="mb-side">
+                            <div class="mb-side-num" id="side-num">01</div>
+                            <div class="mb-side-name" id="side-name">Python</div>
+                            <div class="mb-side-of" id="side-of">01 / 08</div>
+                        </div>
+                        <div class="mb-prog-track">
+                            <div class="mb-prog-fill" id="mb-pfill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-bg-gb"></div>
+    </section>
+
+    <!-- ═══ SKILLS GRID ═══ -->
+    <section class="skills-section" id="skills-sec">
+        <div class="workflow-bg"></div>
+        <div class="workflow-bg-glow" id="skills-bg-glow"></div>
+        <div class="section-header" style="position: relative; z-index: 2;">
+            <div>
+                <div class="tag-label reveal">005 — Full Skill Set</div>
+                <h2 class="section-h reveal" data-delay="150">ALL<br><em>SKILLS</em></h2>
+            </div>
+            <p class="section-sub reveal" data-delay="300">Every tool I've used in production</p>
+        </div>
+        <div class="skills-grid" id="skills-grid" style="position: relative; z-index: 2;"></div>
+    </section>
+
+    <!-- ═══ SKILLS ROADMAP ═══ -->
+    <section class="roadmap-section" id="roadmap">
+        <div class="workflow-bg"></div>
+        <div class="workflow-bg-glow" id="roadmap-bg-glow"></div>
+
+        <div class="roadmap-header">
+            <div class="tag-label reveal">006 — What I Build</div>
+            <h2 class="section-h reveal" data-delay="150">WORK &<br><em>CRAFT</em></h2>
+        </div>
+        <div class="roadmap-track" id="roadmap-track">
+            <!-- injected by JS -->
+        </div>
+    </section>
+
+    <!-- WAVE DIVIDER -->
+    <div style="position:relative; margin-top:-2px; line-height:0; background:#0f0f11;">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="display:block;width:100%;height:80px;">
+            <path d="M0,60 C180,100 360,0 540,50 C720,100 900,20 1080,55 C1260,90 1380,30 1440,50 L1440,100 L0,100 Z"
+                fill="#0a0a0c" />
+        </svg>
+    </div>
+
+
+
+
+
+    <!-- ═══ CRYPTO PORTFOLIO MACBOOK (PREMIUM SILVER) ═══ -->
+    <section class="mb-section" id="portfolio-sec"
+        style="background:var(--bg); height: 250vh; padding: 0 !important; margin: 0 !important; overflow: visible;">
+        <div class="workflow-bg" style="opacity: 0.4;"></div>
+        <div class="mb-sticky pf-bg-override" style="height: 100vh;">
+            <!-- Title Pushed Down to Clear Navbar, Animated -->
+            <div class="pf-top-label blur-reveal"
+                style="text-align: left; position: absolute; top: 50%; left: 9vw; transform: translateY(-50%); width: auto; z-index: 100;">
+                <div class="tag-label"
+                    style="display:inline-flex; border-color:rgba(30,30,30,0.2); color:var(--ink1); font-weight: 600; font-size: 14px; letter-spacing: 4px; padding: 10px 24px;">
+                    MY HOLDINGS</div>
+                <h2
+                    style="text-transform:uppercase; font-size:clamp(28px, 4vw, 56px); letter-spacing:4px; margin-top:16px; color:var(--ink1); padding: 0 20px; filter: drop-shadow(0 4px 12px rgba(255,255,255,0.8));">
+                </h2>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="mb-scroll" id="pf-scroll" style="bottom: 8vh; z-index: 100;">
+                <span style="color:rgba(255,255,255,0.7);">SCROLL TO EXPLORE</span>
+                <div class="scroll-mouse" style="border-color:rgba(255,255,255,0.5);">
+                    <div class="scroll-mouse-dot" style="background:rgba(255,255,255,0.8);"></div>
+                </div>
+            </div>
+
+            <div class="mb-outer" style="margin-top: 10px;">
+                <div class="mb-wrap" id="pf-wrap">
+                    <!-- Modern Silver Macbook -->
+                    <div class="macbook mb-light-theme" id="pf-macbook">
+                        <div class="mb-lid" id="pf-lid">
+                            <div class="mb-bezel">
+                                <div class="mac-bar"
+                                    style="background:rgba(18,18,18,0.95); border-bottom:1px solid rgba(255,255,255,0.05); color:#aaa; justify-content: space-between;">
+                                    <div class="mac-dots">
+                                        <div class="mac-dot" style="background:#FF5F56;"></div>
+                                        <div class="mac-dot" style="background:#FFBD2E;"></div>
+                                        <div class="mac-dot" style="background:#27C93F;"></div>
+                                    </div>
+                                    <!-- Title texts completely removed as requested -->
+                                </div>
+                                <div class="mb-screen" id="pf-screen"
+                                    style="background:linear-gradient(135deg, #fdfbf7, #eae7dc);"></div>
+                                <div class="screen-glow" id="pf-scr-glow"></div>
+                                <div class="scanlines" style="opacity:0.02;"></div>
+                                <div class="scr-cover" id="pf-scr-cover" style="background:#050505;"></div>
+                            </div>
+                        </div>
+                        <div class="mb-hinge" style="background:#a0a0a0; box-shadow:inset 0 1px 4px rgba(0,0,0,0.4);">
+                        </div>
+                        <div class="mb-base" style="background:linear-gradient(to bottom, #f0f0f0 0%, #b4b6ba 100%);">
+                        </div>
+                        <div class="mb-keyboard"
+                            style="background:#d6d7dc; border-top:1px solid #ffffff; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+                        </div>
+                        <div class="mb-side" id="pf-side"
+                            style="color:#000; border-left:2.5px solid rgba(0,0,0,0.1); padding-left: 25px;">
+                            <div class="mb-side-num" id="pf-side-num" style="opacity:1; color:#000; font-weight:900;">01
+                            </div>
+                            <div class="mb-side-name" id="pf-side-name" style="color:#000; font-weight:900; opacity:1;">
+                                Bitcoin</div>
+                            <div class="mb-side-of" id="pf-side-of" style="opacity:0.8; color:#000; font-weight:800;">01
+                                / 06</div>
+                        </div>
+                        <div class="mb-prog-track" style="background:rgba(255,255,255,0.05);">
+                            <div class="mb-prog-fill" id="pf-pfill" style="background:var(--accent);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <footer id="contact-footer"
+        style="background:#06050C; border-top: 1px solid rgba(255,255,255,0.06); position: relative; overflow: hidden; padding: 52px 0 36px;">
+
+        <svg style="position:absolute; left:0; top:0; width:220px; height:100%; pointer-events:none;"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+        </svg>
+
+        <svg style="position:absolute; right:0; top:0; width:220px; height:100%; pointer-events:none;"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="30" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="60" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="90" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="120" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="150" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="180" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="20" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="50" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="80" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="110" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="140" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="170" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+            <circle cx="200" cy="210" r="1.5" fill="rgba(255,255,255,0.18)" />
+        </svg>
+
+        <div class="footer-wrap"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 20px; text-align: center; width: 100%;">
+            <div style="line-height: 0.88; width: 100%;">
+                <div
+                    style="font-size: clamp(44px, 7vw, 110px); font-weight: 900; letter-spacing: -3px; text-transform: uppercase; color: rgba(255,255,255,0.92); font-family: 'Arial Black', 'Helvetica Neue', sans-serif; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both; text-align: center;">
+                    LET'S</div>
+                <div
+                    style="font-size: clamp(44px, 7vw, 110px); font-weight: 900; letter-spacing: -3px; text-transform: uppercase; color: var(--accent); font-family: 'Arial Black', 'Helvetica Neue', sans-serif; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.35s both; text-align: center;">
+                    CONNECT<span class="blink-dot">.</span></div>
+            </div>
+
+            <div style="width: 100%; max-width: 500px; height: 1px; background: rgba(255,255,255,0.08);"></div>
+
+            <div style="display: flex; gap: 52px; animation: fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both;">
+                <a href="https://www.linkedin.com/in/saad-al-ahsan/" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/SAADALAHSAN" target="_blank" class="social-link">GitHub</a>
+                <a href="https://t.me/StevenO_o" target="_blank" class="social-link">Telegram</a>
+                <a href="mailto:saadahsanmain@gmail.com" class="social-link">Email</a>
+            </div>
+
+            <p
+                style="color: rgba(255,255,255,0.18); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin: 0; font-weight: 600;">
+                © 2026 Saad Al Ahsan</p>
+        </div>
+
+    </footer>
+
+    <script data-cfasync="false" src="./cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
